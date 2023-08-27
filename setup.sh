@@ -359,37 +359,37 @@ else
 fi
 
 #install arzsource
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m           >>> Install Source <<<        \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                       ⇱ INSTALL SOURCE ⇲                     \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 sleep 1 
 wget -q https://raw.githubusercontent.com/LynzXvA/pinterest/main/tools/arzsource.sh && chmod +x arzsource.sh && ./arzsource.sh
 clear
 #install ssh-vpn
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m          >>> Install SSH / WS <<<       \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                     ⇱ INSTALL SSH / WS ⇲                     \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 sleep 1
 wget -q https://raw.githubusercontent.com/LynzXvA/pinterest/main/tools/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 clear
 #install ins-xray
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install Xray <<<         \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                     ⇱ INSTALL XRAY ⇲                         \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 sleep 1 
 wget -q https://raw.githubusercontent.com/LynzXvA/pinterest/main/tools/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 clear
 #install ins-xray
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install BR <<<           \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                     ⇱ INSTALL BR ⇲                           \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 sleep 1 
 wget -q https://raw.githubusercontent.com/LynzXvA/pinterest/main/backup/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 clear
 #install ins-xray
-echo -e "┌─────────────────────────────────────────┐"
-echo -e " \E[41;1;39m            >>> Install slowdns <<<      \E[0m$NC"
-echo -e "└─────────────────────────────────────────┘"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                    ⇱ INSTALL SLOW DNS ⇲                      \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 sleep 1 
 wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
 clear
@@ -514,9 +514,29 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo  ""
-echo  "------------------------------------------------------------"
-echo  ""
-echo  "   >>> Service & Port"  | tee -a log-install.txt
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m              ⇱ SCRIPT PREMIUM ⇲                \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\033[0;35m ✘\033[0m For Debian 10 64 bit                          "
+echo -e "\033[0;35m ✘\033[0m For Ubuntu 18.04 & Ubuntu 20.04 64 bit        "
+echo -e "\033[0;35m ✘\033[0m For VPS with KVM and VMWare virtualization    "
+echo -e "\033[0;35m ✘\033[0m Build Up By LynzXvA                        "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m              ⇱ SCRIPT PREMIUM ⇲                \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\033[0;35m ✘\033[0m For Debian 10 64 bit                          "
+echo -e "\033[0;35m ✘\033[0m For Ubuntu 18.04 & Ubuntu 20.04 64 bit        "
+echo -e "\033[0;35m ✘\033[0m For VPS with KVM and VMWare virtualization    "
+echo -e "\033[0;35m ✘\033[0m Build Up By LynzXvA                        "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                ⇱ THANKS TO ⇲                   \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\033[0;35m ❀\033[0m Allah SWT                                     "
+echo -e "\033[0;35m ❀\033[0m LynzXvA                                     "
+echo -e "\033[0;35m ❀\033[0m Sewa Script : 081918484372                                        "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m              ⇱ SERVICE & PORT ⇲                \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo  "   - OpenSSH                 : 22"  | tee -a log-install.txt
 echo  "   - SSH Websocket           : 80" | tee -a log-install.txt
 echo  "   - SSH SSL Websocket       : 443" | tee -a log-install.txt
@@ -532,8 +552,9 @@ echo  "   - Trojan GRPC             : 443" | tee -a log-install.txt
 echo  "   - Trojan WS               : 443" | tee -a log-install.txt
 echo  "   - Sodosok WS/GRPC         : 443" | tee -a log-install.txt
 echo  "   - SlowDNS                 : 53,5300,443" | tee -a log-install.txt
-echo  ""  | tee -a log-install.txt
-echo  "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                 ⇱ FEATURES ⇲                   \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo  "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo  "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo  "   - Dflate                  : [ON]"  | tee -a log-install.txt
@@ -548,9 +569,9 @@ echo  "   - Fully automatic script" | tee -a log-install.txt
 echo  "   - VPS settings" | tee -a log-install.txt
 echo  "   - Restore Data" | tee -a log-install.txt
 echo  "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""
-echo  ""
-echo  "------------------------------------------------------------"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                  ⇱ LynzXvA ⇲                   \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
 echo  ""
 echo  "" | tee -a log-install.txt
