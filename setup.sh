@@ -192,12 +192,12 @@ clear && clear && clear
 clear;clear;clear
 
 # // Starting Setup Domain
-echo -e "${YELLOW}┌───────────────────────────────────────────┐${NC}"
-echo -e "Anda Ingin Menggunakan Domain Pribadi ?"
-echo -e "Atau Ingin Menggunakan Domain Otomatis ?"
-echo -e "Jika Ingin Menggunakan Domain Pribadi, Ketik ${GREEN}1${NC}"
-echo -e "dan Jika Ingin menggunakan Domain Otomatis, Ketik ${GREEN}2${NC}"
-echo -e "${YELLOW}└───────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                   ⇱ CHANGE DOMAIN ⇲                          \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e " [${PURPLE}01${NC}]${NC} Change Your Domain  $NC "
+echo -e " [${PURPLE}02${NC}]${NC} Free Domain For Script   $NC "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 
 read -p "$( echo -e "${GREEN}Input Your Choose ? ${NC}(${YELLOW}1/2${NC})${NC} " )" choose_domain
@@ -225,10 +225,10 @@ mkdir -p /usr/local/etc/xray
 
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-DOMAIN=driwwvpn.my.id
-SUB_DOMAIN=sf-${sub}.driwwvpn.my.id
-CF_ID=andrisupriatnatxb@gmail.com
-CF_KEY=cce1f3c74f307edec74139110061bdceb6a4f
+DOMAIN=tmvan.xyz
+SUB_DOMAIN=sf-${sub}.tmvan.xyz
+CF_ID=nungkauu@gmail.com
+CF_KEY=94ea70b48a5ad8f3fcc37af8c5e934f20fe26
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -293,11 +293,11 @@ clear && clear && clear
 clear;clear;clear
 
 echo -e "${GREEN}Indonesian Language${NC}"
-echo -e "${YELLOW}┌───────────────────────────────────────────┐${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "Silakan Pointing Domain Anda Ke IP VPS"
 echo -e "Untuk Caranya Arahkan NS Domain Ke Cloudflare"
 echo -e "Kemudian Tambahkan A Record Dengan IP VPS"
-echo -e "${YELLOW}└───────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 echo ""
 
@@ -514,14 +514,6 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo  ""
-
-echo "░██████╗███████╗  ████████╗██╗░░░██╗███╗░░██╗███╗░░██╗███████╗██╗░░░░░"  | tee -a log-install.txt
-echo "██╔════╝██╔════╝  ╚══██╔══╝██║░░░██║████╗░██║████╗░██║██╔════╝██║░░░░░"  | tee -a log-install.txt
-echo "╚█████╗░█████╗░░  ░░░██║░░░██║░░░██║██╔██╗██║██╔██╗██║█████╗░░██║░░░░░"  | tee -a log-install.txt
-echo "░╚═══██╗██╔══╝░░  ░░░██║░░░██║░░░██║██║╚████║██║╚████║██╔══╝░░██║░░░░░"  | tee -a log-install.txt
-echo "██████╔╝██║░░░░░  ░░░██║░░░╚██████╔╝██║░╚███║██║░╚███║███████╗███████╗"  | tee -a log-install.txt
-echo "╚═════╝░╚═╝░░░░░  ░░░╚═╝░░░░╚═════╝░╚═╝░░╚══╝╚═╝░░╚══╝╚══════╝╚══════╝"  | tee -a log-install.txt
-
 echo  "------------------------------------------------------------"
 echo  ""
 echo  "   >>> Service & Port"  | tee -a log-install.txt
