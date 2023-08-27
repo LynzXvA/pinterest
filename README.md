@@ -1,5 +1,16 @@
 <h2 align="center"> AUTO SCRIPT BY XvA </h2>
-</p> 
+</p>
+<h2 align="center"> ◇━━━━━━━━━━━━━━◇
+   ✨AUTO SCRIPT✨
+         PRICELIST
+◇━━━━━━━━━━━━━━◇
+   1 IP = 10K = 30 DAYS
+   2 IP = 20K = 30 DAYS
+   1 IP = 17K = 60 DAYS
+   2 IP = 25K = 60 DAYS
+   2 IP = 40K = LIFETIME
+◇━━━━━━━━━━━━━━◇
+   </h2>
 
 <h2 align="center"> Supported Linux Distribution</h2>
 
