@@ -181,11 +181,11 @@ echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[45;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${PURPLE} ✘ ${NC}Use Core           : Driww Project ${NC}" 
-echo -e "${PURPLE} ✘ ${NC}Region Server      :  $CITY${NC}"
-echo -e "${PURPLE} ✘ ${NC}OS  Vps            :  ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
-echo -e "${PURPLE} ✘ ${NC}Domain             :  $(cat /etc/xray/domain)${NC}"
-echo -e "${PURPLE} ✘ ${NC}NS Domain          :  $(cat /root/nsdomain)${NC}"
+echo -e "${PURPLE} ✘ ${NC}Use Core           : Akhir Zaman ${NC}" 
+echo -e "${PURPLE} ✘ ${NC}Region Server      : $CITY${NC}"
+echo -e "${PURPLE} ✘ ${NC}OS  Vps            : ${BIGreen}"`hostnamectl | grep "Operating System" | cut -d ' ' -f5-` $NC
+echo -e "${PURPLE} ✘ ${NC}Domain             : $(cat /etc/xray/domain)${NC}"
+echo -e "${PURPLE} ✘ ${NC}NS Domain          : $(cat /root/nsdomain)${NC}"
 echo -e "${PURPLE} ✘ ${NC}Ip Vps             : $IPVPS${NC}"
 echo -e "${PURPLE} ✘ ${NC}Isp Vps            : $ISP${NC}"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
@@ -223,17 +223,10 @@ echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[45;1;39m                      ⇱ LYNZ XvA STORE ⇲                      \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "${PURPLE} ✘ ${NC}Expired          : $(( (d1 - d2) / 86400 )) Days $NC"
-}
-mai="datediff "$Exp" "$DATE""
 echo -e "${PURPLE} ✘ ${NC} Version         : $(cat /opt/.ver)LTS ${NC}"
 echo -e "${PURPLE} ✘ ${NC} User            : $Name \e[0m"
 echo -e "${PURPLE} ✘ ${NC} Developer       : LynzXvA \e[0m"
-if [ $exp \< 1000 ];
-then
-else
-    datediff "$Exp" "$DATE"
-fi;
+echo -e "${PURPLE} ✘ ${NC}Script Expired   : $Exp"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo
 read -p " Select menu : " opt
