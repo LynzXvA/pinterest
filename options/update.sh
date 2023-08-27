@@ -37,19 +37,18 @@ sts="${Error}"
 fi
 clear
 echo ""
-echo -e "   \e[$line--------------------------------------------------------\e[m"
-echo -e "   \e[$back_text                 \e[30m[\e[$box CHECK NEW UPDATE\e[30m ]                   \e[m"
-echo -e "   \e[$line--------------------------------------------------------\e[m"
-echo -e "   \e[$below VERSION NOW >> $Info1"
-echo -e "   \e[$below STATUS UPDATE >> $sts"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                    ⇱ CHECK NEW UPDATE ⇲                      \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e " ${PURPLE}VERSION NOW${NC}          : $Info1"
+echo -e " ${PURPLE}STATUS UPDATE${NC}        : $sts"
 echo -e ""
 echo -e "       \e[1;31mWould you like to proceed?\e[0m"
 echo ""
-echo -e "            \e[0;32m[ Select Option ]\033[0m"
-echo -e "     \e[$number [1]\e[m \e[$below Check Script Update Now\e[m"
-echo -e "     \e[$number [x]\e[m \e[$below Back To Menu\e[m"
+echo -e " [${PURPLE}01${NC}]${NC} Update Script   $NC "
+echo -e " [${PURPLE}x${NC}]${NC}  Back To Menu   $NC "
 echo -e ""
-echo -e "   \e[$line--------------------------------------------------------\e[m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\e[$line"
 read -p "PPlease Choose 1 or x : " option2
 case $option2 in
@@ -170,9 +169,9 @@ echo "$ver" > /home/ver
 rm -f update.sh
 clear
 echo ""
-echo -e "\033[0;34m----------------------------------------\033[0m"
-echo -e "\E[44;1;39m            SCRIPT UPDATED              \E[0m"
-echo -e "\033[0;34m----------------------------------------\033[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                ⇱ UPDATE SCRIPT SELESAI⇲                      \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu

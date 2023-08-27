@@ -61,22 +61,19 @@ chmod +x /usr/bin/reboot
 fi
 
 echo -e ""
-echo -e "------------------------------------" | lolcat
-echo -e "             AUTO REBOOT"
-echo -e "------------------------------------" | lolcat
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                       ⇱ AUTO REBOOT ⇲                        \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "    1)  Auto Reboot 30 Minutes"
-echo -e "    2)  Auto Reboot 1 Hours"
-echo -e "    3)  Auto Reboot 12 Hours"
-echo -e "    4)  Auto Reboot 24 Hours"
-echo -e "    5)  Auto Reboot 1 Weeks"
-echo -e "    6)  Auto Reboot 1 Mount"
-echo -e "    7)  Turn Off Auto Reboot"
+echo -e " [${PURPLE}01${NC}]${NC} Auto Reboot 30 Menit   $NC "
+echo -e " [${PURPLE}01${NC}]${NC} Auto Reboot 1 Jam   $NC "
+echo -e " [${PURPLE}01${NC}]${NC} Auto Reboot 12 Jam   $NC "
+echo -e " [${PURPLE}01${NC}]${NC} Auto Reboot 24 Jam   $NC "
+echo -e " [${PURPLE}01${NC}]${NC} Auto Reboot 1 Hari   $NC "
+echo -e " [${PURPLE}01${NC}]${NC} Auto Reboot 1 Bulan   $NC "
+echo -e " [${PURPLE}01${NC}]${NC} Trun Off Auto Reboot   $NC "
 echo -e ""
-echo -e "------------------------------------" | lolcat
-echo -e "    x)   MENU"
-echo -e "------------------------------------" | lolcat
-echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -p "     Please Input Number  [1-7 or x] :  "  autoreboot
 echo -e ""
 case $autoreboot in

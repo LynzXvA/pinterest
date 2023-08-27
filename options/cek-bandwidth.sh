@@ -55,33 +55,23 @@ off='\x1b[m'
 
 clear
 echo -e ""
-echo -e "${cyan}======================================${off}"
-echo -e        "           BANDWITH MONITOR " | lolcat
-echo -e "${cyan}======================================${off}"
-echo -e "${green}"
-echo -e "     1 ⸩   Lihat Total Bandwith Tersisa"
-
-echo -e "     2 ⸩   Tabel Penggunaan Setiap 5 Menit"
-
-echo -e "     3 ⸩   Tabel Penggunaan Setiap Jam"
-
-echo -e "     4 ⸩   Tabel Penggunaan Setiap Hari"
-
-echo -e "     5 ⸩   Tabel Penggunaan Setiap Bulan"
-
-echo -e "     6 ⸩   Tabel Penggunaan Setiap Tahun"
-
-echo -e "     7 ⸩   Tabel Penggunaan Tertinggi"
-
-echo -e "     8 ⸩   Statistik Penggunaan Setiap Jam"
-
-echo -e "     9 ⸩   Lihat Penggunaan Aktif Saat Ini"
-
-echo -e "    10 ⸩   Lihat Trafik Penggunaan Aktif Saat Ini [5s]"
-
-echo -e "     x ⸩   Menu"
-echo -e "${off}"
-echo -e "${cyan}======================================${off}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                    ⇱ BANDWITH MONITOR ⇲                      \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+echo -e " [${PURPLE}01${NC}]${NC} Lihat Total Bandwith Tersisa   $NC "
+echo -e " [${PURPLE}02${NC}]${NC}  Pengguna Setiap 5 Menit   $NC "
+echo -e " [${PURPLE}03${NC}]${NC}  Pengguna Setiap Jam   $NC "
+echo -e " [${PURPLE}04${NC}]${NC}  Pengguna Setiap hari   $NC "
+echo -e " [${PURPLE}05${NC}]${NC}  Pengguna Setiap Bulan   $NC "
+echo -e " [${PURPLE}06${NC}]${NC}  Pengguna Setiap Tahun   $NC "
+echo -e " [${PURPLE}07${NC}]${NC}  Pengguna Tertinggi   $NC "
+echo -e " [${PURPLE}08${NC}]${NC}  Statistik Pengguna Setiap jam   $NC "
+echo -e " [${PURPLE}09${NC}]${NC}  Pengguna Aktif Saat Ini   $NC "
+echo -e " [${PURPLE}10${NC}]${NC}  Check Traffic Saat Ini  $NC "
+echo -e " [${PURPLE}00${NC}]${NC}  X Back   $NC "
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "${green}"
 read -p "     [#]  Masukkan Nomor :  " noo
 echo -e "${off}"

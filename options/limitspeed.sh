@@ -80,13 +80,16 @@ else
 sts="${Error}"
 fi
 clear
-echo -e " =============================="
-echo -e "     Limit Bandwidth Speed         "
-echo -e " =============================="
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                  ⇱ LIMIT BANDWITH SPEED ⇲                   \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
 echo -e " Status $sts"
-echo -e "  1. Start Limit"
-echo -e "  2. Stop Limit"
-echo -e " Press CTRL+C to return"
+echo -e " [${PURPLE}01${NC}]${NC} Start Limit  $NC "
+echo -e " [${PURPLE}02${NC}]${NC} Stop Limit  $NC "
+echo -e " [${PURPLE}x${NC}]${NC} Press Ctrl+C To Retrun  $NC "
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 read -rp " Please Enter The Correct Number : " -e num
 if [[ "$num" = "1" ]]; then
 start

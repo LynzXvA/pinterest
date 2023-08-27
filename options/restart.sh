@@ -70,20 +70,21 @@ echo -e ""
 
 clear
 echo -e ""
-echo -e "======================================"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                    ⇱ RESTART SERVICE ⇲                       \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e ""
-echo -e "    [1] Restart All Services"
-echo -e "    [2] Restart OpenSSH"
-echo -e "    [3] Restart Dropbear"
-echo -e "    [4] Restart Stunnel5"
-echo -e "    [5] Restart Nginx"
-echo -e "    [6] Restart Badvpn"
-echo -e "    [x] Menu"
+echo -e " [${PURPLE}01${NC}]${NC} Restart All Service $NC "
+echo -e " [${PURPLE}02${NC}]${NC} Restart Open SSH  $NC "
+echo -e " [${PURPLE}03${NC}]${NC} Restart Dropbear $NC "
+echo -e " [${PURPLE}04${NC}]${NC} Restart Stunnel5 $NC "
+echo -e " [${PURPLE}05${NC}]${NC} Restart Nginx $NC "
+echo -e " [${PURPLE}06${NC}]${NC} Restart Badvpn  $NC "
+echo -e " [${PURPLE}x${NC}]${NC} Menu   $NC "
 echo -e ""
 read -p "    Select From Options [1-6 or x] :  " Restart
 echo -e ""
-echo -e "======================================"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 sleep 1
 clear
 case $Restart in
