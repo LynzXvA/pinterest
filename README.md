@@ -1,6 +1,7 @@
 <h2 align="center"> AUTO SCRIPT BY XvA </h2>
 </p>
-<p ◇━━━━━━━━━━━━━━◇
+
+<h2 align="center">◇━━━━━━━━━━━━━━◇
    ✨AUTO SCRIPT✨
       PRICELIST
 ◇━━━━━━━━━━━━━━◇
