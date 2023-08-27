@@ -235,7 +235,6 @@ echo -e "${PURPLE} ✘ ${NC} User            : $Name \e[0m"
 echo -e "${PURPLE} ✘ ${NC} Developer       : LynzXvA \e[0m"
 if [ $exp \< 1000 ];
 then
-echo -e "${PURPLE} ✘ ${NC}License        : $sisa_hari$NC Days Tersisa $NC"
 else
     datediff "$Exp" "$DATE"
 fi;
