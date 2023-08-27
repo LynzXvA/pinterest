@@ -1,12 +1,27 @@
 #!/bin/bash
-dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
-###########- COLOR CODE -##############
-colornow=$(cat /etc/ssnvpn/theme/color.conf)
-NC="\e[0m"
-RED="\033[0;31m" 
-COLOR1="\033[1;36m"
-COLBG1="\e[1;97;101m"                 
+# SCRIPT BY  Lynz Vpn
+
+BIBlack='\033[1;90m'      # Black
+BIRed='\033[1;91m'        # Red
+BIGreen='\033[1;92m'      # Green
+BIYellow='\033[1;93m'     # Yellow
+BIBlue='\033[1;94m'       # Blue
+BIPurple='\033[1;95m'     # Purple
+BICyan='\033[1;96m'       # Cyan
+BIWhite='\033[1;97m'      # White
+UWhite='\033[4;37m'       # White
+On_IPurple='\033[0;105m'  #
+On_IRed='\033[0;101m'
+IBlack='\033[0;90m'       # Black
+IRed='\033[0;91m'         # Red
+IGreen='\033[0;92m'       # Green
+IYellow='\033[0;93m'      # Yellow
+IBlue='\033[0;94m'        # Blue
+IPurple='\033[0;95m'      # Purple
+ICyan='\033[0;96m'        # Cyan
+IWhite='\033[0;97m'       # White
+NC='\e[0m'
+
 # // Export Color & Information
 export RED='\033[0;31m'
 export GREEN='\033[0;32m'
@@ -17,6 +32,21 @@ export CYAN='\033[0;36m'
 export LIGHT='\033[0;37m'
 export NC='\033[0m'
 
+# // Export Banner Status Information
+export EROR="[${RED} EROR ${NC}]"
+export INFO="[${YELLOW} INFO ${NC}]"
+export OKEY="[${GREEN} OKEY ${NC}]"
+export PENDING="[${YELLOW} PENDING ${NC}]"
+export SEND="[${YELLOW} SEND ${NC}]"
+export RECEIVE="[${YELLOW} RECEIVE ${NC}]"
+
+# // Export Align
+export BOLD="\e[1m"
+export WARNING="${RED}\e[5m"
+export UNDERLINE="\e[4m"
+
+
+
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e "\E[45;1;39m                      ⇱ MENU BACKUP ⇲                         \E[0m"
@@ -24,8 +54,7 @@ echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 echo -e " [${PURPLE}01${NC}]${NC} Backup   $NC "
 echo -e " [${PURPLE}02${NC}]${NC} Restore   $NC "
-echo -e " [${PURPLE}03${NC}]${NC} Backup API   $NC "
-echo -e " [${PURPLE}04${NC}]${NC} Reset API   $NC "
+echo -e " [${PURPLE}00${NC}]${NC} Back To Menu   $NC "
 echo -e ""
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
@@ -34,11 +63,5 @@ echo -e ""
 case $opt in
 01 | 1) clear ; backup ;;
 02 | 2) clear ; restore ;;
-03 | 3) clear ; menu3 ;;
-04 | 4) clear ; menu4 ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
-esac
-
-       
-
