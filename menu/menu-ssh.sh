@@ -118,7 +118,7 @@ sqd="$(cat /root/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 
 
-Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
+Login=triall`</dev/urandom tr -dc X-Z0-9 | head -c4`
 hari="1"
 Pass=1
 echo Ping Host &> /dev/null
@@ -133,43 +133,55 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
 
 if [[ ! -z "${PID}" ]]; then
-echo -e "${BIBlue}═════════════SSH ACCOUNTS═══════════${NC}"
-echo -e "${BIBlue}════════════════════════════════════${NC}"
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "       SSH ACCOUNT"
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Host       : $domen"
 echo -e "Username   : $Login" 
-echo -e "Password   : $Pass"
-echo -e "Expired On : $exp" 
-echo -e "${BIBlue}════════════════════════════════════${NC}"
- echo -e "Host       : $domen" 
+echo -e "Password   : $Pass" 
+echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
+echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
+echo -e "SlowDNS    : 53,5300,443"
+echo -e "Udp Custom : 1-65535" 
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
-echo -e "SSH-WS     : $portsshws" 
+echo -e "SSH-WS     : $portsshws,8880,8080" 
 echo -e "SSH WS SSL : $wsssl" 
-echo -e "SSL/TLS    : $ssl" 
+echo -e "SSL/TLS    : $ssl"
+echo -e "UDP        : 1-65535" 
 echo -e "UDPGW      : 7100-7300" 
-echo -e "${BIBlue}════════════════════════════════════${NC}"
-echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
-echo -e "${BIBlue}════════════════════════════════════${NC}"
-echo -e "${BICyan}LynzXvA Auto Script Service${NC}" 
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Payload Ws : GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Expired On : $exp" 
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "${BICyan}LynzXvA Auto Script Service${NC}"  
 
 else
 clear
-echo -e "${BIBlue}═════════════SSH ACCOUNTS═══════════${NC}"
-echo -e "${BIBlue}════════════════════════════════════${NC}"
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "       SSH ACCOUNT"
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Host       : $domen"
 echo -e "Username   : $Login" 
-echo -e "Password   : $Pass"
-echo -e "Expired On : $exp" 
-echo -e "${BIBlue}════════════════════════════════════${NC}"
- echo -e "Host       : $domen" 
+echo -e "Password   : $Pass" 
+echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
+echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
+echo -e "SlowDNS    : 53,5300,443"
+echo -e "Udp Custom : 1-65535" 
 echo -e "OpenSSH    : $opensh"
 echo -e "Dropbear   : $db" 
-echo -e "SSH-WS     : $portsshws" 
+echo -e "SSH-WS     : $portsshws,8880,8080" 
 echo -e "SSH WS SSL : $wsssl" 
-echo -e "SSL/TLS    : $ssl" 
+echo -e "SSL/TLS    : $ssl"
+echo -e "UDP        : 1-65535" 
 echo -e "UDPGW      : 7100-7300" 
-echo -e "${BIBlue}════════════════════════════════════${NC}"
-echo -e "GET / HTTP/1.1[crlf]Host: $domen[crlf]Connection: Keep-Alive[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]"
-echo -e "${BIBlue}════════════════════════════════════${NC}"
-echo -e "${BICyan}LynzXvA Auto Script Service${NC}" 
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Payload Ws : GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]"
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Expired On : $exp" 
+echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "${BICyan}LynzXvA Auto Script Service${NC}"  
 fi
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
