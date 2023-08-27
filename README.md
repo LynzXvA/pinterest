@@ -10,3 +10,4 @@
 </p>
 
 <h2 align="center"> PAYMENT </h2>
+![qr_Warung TOM_22 08 23_1692680871 (1)](https://github.com/LynzXvA/pinterest/assets/143097592/970bc952-1edc-4a02-a979-bd79c8d742c3)
