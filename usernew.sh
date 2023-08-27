@@ -139,11 +139,9 @@ if [[ ! -z "${PID}" ]]; then
 echo -e "${BIBlue}══════════════════════════${NC}"
 echo -e "       SSH ACCOUNT"
 echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Host       : $domen"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass" 
-echo -e "City       : $CITY"
-echo -e "ISP        : $ISP"
-echo -e "Host       : $domen" 
 echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
 echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
 echo -e "SlowDNS    : 53,5300,443"
@@ -167,11 +165,9 @@ else
 echo -e "${BIBlue}══════════════════════════${NC}"
 echo -e "       SSH ACCOUNT"
 echo -e "${BIBlue}══════════════════════════${NC}"
+echo -e "Host       : $domen"
 echo -e "Username   : $Login" 
 echo -e "Password   : $Pass" 
-echo -e "City       : $CITY"
-echo -e "ISP        : $ISP"
-echo -e "Host       : $domen" 
 echo -e "Nameserver : $sldomain" | tee -a /etc/log-create-user.log
 echo -e "PubKey     : $slkey" | tee -a /etc/log-create-user.log
 echo -e "SlowDNS    : 53,5300,443"
@@ -188,7 +184,7 @@ echo -e "Payload Ws : GET wss://bug.com/ HTTP/1.1[crlf]Host: $domen[crlf]Upgrade
 echo -e "${BIBlue}══════════════════════════${NC}"
 echo -e "Expired On : $exp" 
 echo -e "${BIBlue}══════════════════════════${NC}"
-echo -e "${BICyan}LynzXvA Auto Script Service${NC}" 
+echo -e "${BICyan}LynzXvA Auto Script Service${NC}"  
 
 fi
 echo "" | tee -a /etc/log-create-user.log
