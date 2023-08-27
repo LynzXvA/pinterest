@@ -229,7 +229,7 @@ menu-vmess
 
 function trialvmess(){
 domain=$(cat /etc/xray/domain)
-user=Satan`</dev/urandom tr -dc X-Z0-9 | head -c4`
+user=Triall`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -470,19 +470,19 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
 }
 
 clear
-echo -e "${BICyan}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan}│                    VMESS MENU                   │$NC"
-echo -e "${BICyan}└─────────────────────────────────────────────────┘${NC}"
-echo -e "${BICyan}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "     ${BICyan}[${COLOR1}1${BICyan}] Create Vmess Account     "
-echo -e "     ${BICyan}[${COLOR1}2${BICyan}] Trial Vmess Account     "
-echo -e "     ${BICyan}[${COLOR1}3${BICyan}] Delete Account Vmess     "
-echo -e "     ${BICyan}[${COLOR1}4${BICyan}] Renew Account Vmess     "
-echo -e "     ${BICyan}[${COLOR1}5${BICyan}] Cek User XRAY     "
-echo -e "     ${BICyan}[${COLOR1}6${BICyan}] Detail Vmess Account     "
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                     ⇱ MENU VMESS ⇲                           \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo -e ""
-echo -e "     ${BICyan}[${COLOR1}0${BICyan}] Back To Menu     "
-echo -e "${BICyan}└──────────────────────────────────────────────────┘${NC}"
+echo -e " [${PURPLE}01${NC}]${NC} Create Account Vmess  $NC "
+echo -e " [${PURPLE}02${NC}]${NC} Triall Account Vmess  $NC "
+echo -e " [${PURPLE}03${NC}]${NC} Delete Account Vmess  $NC "
+echo -e " [${PURPLE}04${NC}]${NC} Renew Account Vmess  $NC "
+echo -e " [${PURPLE}05${NC}]${NC} Check User Login Vmess  $NC "
+echo -e " [${PURPLE}06${NC}]${NC} Detail Vmess Account  $NC "
+echo -e " [${PURPLE}00${NC}]${NC} Back To Menu  $NC "
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 read -p " Select menu : " opt
 echo -e ""

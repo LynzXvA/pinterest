@@ -356,19 +356,19 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
     fi
 }
 clear
-echo -e "${BICyan}┌─────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan}│                     VLESS MENU                  │$NC"
-echo -e "${BICyan}└─────────────────────────────────────────────────┘${NC}"
-echo -e " ${BICyan}┌───────────────────────────────────────────────┐${NC}"
-echo -e "     ${BICyan}[${BIWhite}1${BICyan}] Create Vless Account     "
-echo -e "     ${BICyan}[${BIWhite}2${BICyan}] Trial Vless Acoount     "
-echo -e "     ${BICyan}[${BIWhite}3${BICyan}] Delete Account Vless     "
-echo -e "     ${BICyan}[${BIWhite}4${BICyan}] Renew Account Vless     "
-echo -e "     ${BICyan}[${BIWhite}5${BICyan}] Cek User Active XRAY     "
-echo -e "     ${BICyan}[${BIWhite}6${BICyan}] Detail Account Vless     "
-
-echo -e "     ${BICyan}[${BIWhite}0${BICyan}] Back To Menu     "
-echo -e " ${BICyan}└──────────────────────────────────────────────┘${NC}"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e "\E[45;1;39m                     ⇱ MENU VLESS ⇲                           \E[0m"
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
+echo -e ""
+echo -e " [${PURPLE}01${NC}]${NC} Create Account Vless  $NC "
+echo -e " [${PURPLE}02${NC}]${NC} Triall Account Vless  $NC "
+echo -e " [${PURPLE}03${NC}]${NC} Delete Account Vless  $NC "
+echo -e " [${PURPLE}04${NC}]${NC} Renew Account Vless  $NC "
+echo -e " [${PURPLE}05${NC}]${NC} Check User Login Vless  $NC "
+echo -e " [${PURPLE}06${NC}]${NC} Detail Vless Account  $NC "
+echo -e " [${PURPLE}00${NC}]${NC} Back To Menu  $NC "
+echo -e ""
+echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 echo ""
 read -p " Select menu : " opt
 echo -e ""
