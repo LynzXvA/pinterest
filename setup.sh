@@ -226,7 +226,7 @@ mkdir -p /usr/local/etc/xray
 # // String / Request Data
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 DOMAIN=tmvan.xyz
-SUB_DOMAIN=sf-${sub}.tmvan.xyz
+SUB_DOMAIN=vpn-${sub}.tmvan.xyz
 CF_ID=nungkauu@gmail.com
 CF_KEY=94ea70b48a5ad8f3fcc37af8c5e934f20fe26
 set -euo pipefail
