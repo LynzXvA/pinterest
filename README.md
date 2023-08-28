@@ -8,6 +8,7 @@
 
 </p>
 
-<h2 align="center"> PAYMENT </h2>
+<h2 align="center"> TAMPILAN SCRIPT </h2>
 
-![qr_Warung TOM_22 08 23_1692680871 (1)](https://github.com/LynzXvA/pinterest/assets/143097592/6cbb224f-cb47-4215-8c8d-67e91c411e78)
+![Screenshot_20230827_220437_JuiceSSH](https://github.com/LynzXvA/pinterest/assets/143097592/bb97ed02-d896-470e-a025-a0a017981765)
+![Screenshot_20230827_143413_JuiceSSH](https://github.com/LynzXvA/pinterest/assets/143097592/0b1bfa2f-5cea-45f1-9e01-718f5b8931e3)
