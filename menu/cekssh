@@ -1,0 +1,61 @@
+#!/bin/bash
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+#link izin ip vps
+url_izin='https://raw.githubusercontent.com/LynzXvA/permission/main/ip'
+
+# Mendapatkan IP VPS saat ini
+ip_vps=$(curl -s ifconfig.me)
+
+# Mendapatkan isi file izin.txt dari URL
+izin=$(curl -s "$url_izin")
+
+# Memeriksa apakah konten izin.txt berhasil didapatkan
+if [[ -n "$izin" ]]; then
+  while IFS= read -r line; do
+    # Memisahkan nama VPS, IP VPS, dan tanggal kadaluwarsa
+    nama=$(echo "$line" | awk '{print $1}')
+    ipvps=$(echo "$line" | awk '{print $2}')
+    tanggal=$(echo "$line" | awk '{print $3}')
+
+    # Memeriksa apakah IP VPS saat ini cocok dengan IP VPS yang ada di izin.txt
+    if [[ "$ipvps" == "$ip_vps" ]]; then
+      echo "Nama VPS: $nama"
+      echo "IP VPS: $ipvps"
+      echo "Tanggal Kadaluwarsa: $tanggal"
+      break
+    fi
+  done <<< "$izin"
+
+  # Memeriksa apakah IP VPS ditemukan dalam izin.txt
+  if [[ "$ipvps" != "$ip_vps" ]]; then
+    echo "IP VPS tidak ditemukan dalam izin.txt"
+    exit 0
+  fi
+else
+  echo "Konten izin.txt tidak berhasil didapatkan dari URL"
+  exit 0
+fi
+clear
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "     =[ SSH User Login ]=         "
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+mulog=$(mesinssh)
+data=( `cat /etc/passwd | grep home | cut -d ' ' -f 1 | cut -d : -f 1`);
+for user in "${data[@]}"
+do
+cekcek=$(echo -e "$mulog" | grep $user | wc -l)
+if [[ $cekcek -gt 0 ]]; then
+echo -e "\e[33;1mUser\e[32;1m  : $user"
+echo -e "\e[33;1mLogin\e[32;1m : $cekcek IP Login "
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo "slot" >> /root/.system
+else
+echo > /dev/null
+fi
+sleep 0.1
+done
+aktif=$(cat /root/.system | wc -l)
+echo -e "$aktif User Online"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+sed -i "d" /root/.system

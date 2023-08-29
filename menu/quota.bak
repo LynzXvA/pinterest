@@ -1,0 +1,5 @@
+#!/bin/bash
+quota-vmess
+quota-vless
+quota-trojan
+quota-socks5

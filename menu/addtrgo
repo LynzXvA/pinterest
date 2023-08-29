@@ -1,0 +1,48 @@
+#!/bin/bash
+clear
+uuid=$(cat /etc/trojan-go/uuid.txt)
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/xray/domain)
+fi
+read -p "Username         : " user
+read -p "Quota (GB)       : " quota
+read -p "Max Ip login     : " iplimit
+read -p "Masaaktif        : " masaaktif
+until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
+		user_EXISTS=$(grep -w $user /etc/trojan-go/akun.conf | wc -l)
+
+		if [[ ${user_EXISTS} == '1' ]]; then
+			echo ""
+			echo -e "Username ${RED}${user}${NC} Already On VPS Please Choose Another"
+			exit 1
+		fi
+	done
+sed -i '/"'""$uuid""'"$/a\,"'""$user""'"' /etc/trojan-go/config.json
+exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+hariini=`date -d "0 days" +"%Y-%m-%d"`
+echo -e "#! $user $exp" >> /etc/trojan-go/akun.conf
+systemctl restart trojan-go.service
+link="trojan-go://${user}@${domain}:2087/?sni=${domain}&type=ws&host=${domain}&path=/igniter-go&encryption=none#$user"
+clear
+echo -e ""
+
+echo -e "══════════════════════════"                 
+echo -e "    <=  TROJAN ACOUNT =>"       
+echo -e "══════════════════════════"                 
+echo -e ""
+echo -e "Username     : $user"
+echo -e "CITY         : $(cat /root/.mycity)"
+echo -e "ISP          : $(cat /root/.myisp)"
+echo -e "Host/IP      : $(cat /etc/xray/domain)"
+echo -e "NSDOMAIN     : $(cat /etc/xray/dns)"
+echo -e "PUBKEY       : $(cat /etc/slowdns/server.pub)"
+echo -e "Port         : 2087"
+echo -e "Key          : ${user}"
+echo -e "Path         : /igniter-go"               
+echo -e ""  
+echo -e "══════════════════════════"                 
+echo -e "Link Go  => ${link}"
+echo -e "══════════════════════════"                 
+echo -e "  Expired => $exp"
+echo -e "══════════════════════════"                 
+

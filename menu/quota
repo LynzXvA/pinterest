@@ -1,0 +1,4 @@
+#!/bin/bash
+quota-vmess
+quota-vless
+quota-trojan
